@@ -11,9 +11,9 @@ public class Main extends Application {
     }
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root=FXMLLoader.load(getClass().getResource("Emodash.fxml"));
+        Parent root=FXMLLoader.load(getClass().getResource("homepage.fxml"));
         stage.setTitle("Emotrack");
-        stage.setScene(new Scene(root,300,300));
+        stage.setScene(new Scene(root,500,500));
         stage.show();
 
 
