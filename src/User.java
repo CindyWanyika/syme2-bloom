@@ -5,6 +5,7 @@ import java.util.HashMap;
 public class User {
     private String name;
     private String password;
+    private String email;
     private ArrayList<Emotion> emotions;
     private ArrayList<Emotion> happiness;
     private ArrayList<Emotion> sadness;
@@ -13,17 +14,18 @@ public class User {
     private static HashMap<String,String> allUsers;
     private Emotion currentEmotion;
 
-    public User(String name,String password){
+    public User(String name,String password,String email){
         this.name=name;
         this.password=password;
+        this.email=email;
         emotions=new ArrayList<>();
         happiness=new ArrayList<>();
         sadness=new ArrayList<>();
         anger=new ArrayList<>();
         anxiety=new ArrayList<>();
     }
-    public void createAccount(String name,String password){
-        User newUser=new User(name,password);
+    public void createAccount(String name,String password,String email){
+        User newUser=new User(name,password,email);
         allUsers.put(name, password);
     }
     public static boolean login(String name,String password){
@@ -105,4 +107,11 @@ public class User {
         this.anxiety = anxiety;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 }

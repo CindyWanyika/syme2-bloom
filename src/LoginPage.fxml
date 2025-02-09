@@ -1,14 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="LoginPage"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: lightblue;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginPage">
+   <children>
+      <Text fill="#1748ba" layoutX="148.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log in to your Emotrack account">
+         <font>
+            <Font name="Britannic Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="161.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="161.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <Text layoutX="160.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Text>
+      <TextField fx:id="name" layoutX="241.0" layoutY="144.0" prefHeight="25.0" prefWidth="189.0" />
+      <TextField fx:id="email" layoutX="241.0" layoutY="188.0" prefHeight="25.0" prefWidth="189.0" />
+      <Label fx:id="feedbackLabel" layoutX="168.0" layoutY="278.0" prefHeight="17.0" prefWidth="271.0" />
+      <Button fx:id="loginButton" layoutX="274.0" layoutY="317.0" mnemonicParsing="false" text="Login">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <PasswordField fx:id="pword" layoutX="241.0" layoutY="228.0" prefHeight="25.0" prefWidth="189.0" />
+   </children>
 </AnchorPane>
